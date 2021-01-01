@@ -5,12 +5,21 @@
            fetch=".."
            review="https://android-review.googlesource.com/" />
 
+  <remote name="raspdroid"
+          fetch="https://github.com/raspdroid" />
+
   <remote name="arpi"
           fetch="https://github.com/android-rpi" />
 
   <default revision="refs/tags/android-11.0.0_r25"
            remote="aosp"
            sync-j="4" />
+
+  <!-- projects added/changed by secuflag -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="raspdroid" />
+  <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" remote="raspdroid" />
+  <project path="platform_testing" name="android_platform_testing" remote="raspdroid" />
+  <project path="system/bt" name="android_system_bt" remote="raspdroid" />
 
   <!-- projects added/changed by arpi -->
   <project path="frameworks/av" name="frameworks_av" revision="arpi-11" remote="arpi" />
@@ -505,7 +514,6 @@
   <project path="hardware/google/interfaces" name="platform/hardware/google/interfaces" groups="pdk" />
   <project path="hardware/google/pixel" name="platform/hardware/google/pixel" groups="generic_fs,pixel" />
   <project path="hardware/google/pixel-sepolicy" name="platform/hardware/google/pixel-sepolicy" groups="generic_fs,pixel" />
-  <project path="hardware/interfaces" name="platform/hardware/interfaces" groups="pdk" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense,pdk" />
   <project path="hardware/knowles/athletico/sound_trigger_hal" name="platform/hardware/knowles/athletico/sound_trigger_hal" groups="coral,generic_fs" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
@@ -636,7 +644,6 @@
   <project path="packages/apps/TimeZoneUpdater" name="platform/packages/apps/TimeZoneUpdater" groups="pdk" />
   <project path="packages/apps/ThemePicker" name="platform/packages/apps/ThemePicker" groups="pdk-fs" />
   <project path="packages/apps/Traceur" name="platform/packages/apps/Traceur" groups="pdk-fs" />
-  <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" groups="pdk-fs" />
   <project path="packages/apps/TV" name="platform/packages/apps/TV" groups="pdk" />
   <project path="packages/apps/UniversalMediaPlayer" name="platform/packages/apps/UniversalMediaPlayer" />
   <project path="packages/apps/WallpaperPicker" name="platform/packages/apps/WallpaperPicker" groups="pdk-fs" />
@@ -679,7 +686,6 @@
   <project path="packages/wallpapers/ImageWallpaper" name="platform/packages/wallpapers/ImageWallpaper" groups="pdk-fs" />
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" groups="pdk-fs" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
-  <project path="platform_testing" name="platform/platform_testing" groups="pdk-fs,pdk-cw-fs,cts" />
   <project path="prebuilts/abi-dumps/ndk" name="platform/prebuilts/abi-dumps/ndk" groups="pdk-fs" clone-depth="1" />
   <project path="prebuilts/abi-dumps/platform" name="platform/prebuilts/abi-dumps/platform" groups="pdk-fs" clone-depth="1" />
   <project path="prebuilts/abi-dumps/vndk" name="platform/prebuilts/abi-dumps/vndk" groups="pdk-fs" clone-depth="1" />
@@ -737,7 +743,6 @@
   <project path="prebuilts/vndk/v29" name="platform/prebuilts/vndk/v29" groups="pdk" clone-depth="1" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/apex" name="platform/system/apex" groups="pdk" />
-  <project path="system/bt" name="platform/system/bt" groups="pdk" />
   <project path="system/bpf" name="platform/system/bpf" groups="pdk" />
   <project path="system/bpfprogs" name="platform/system/bpfprogs" groups="pdk" />
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" />
