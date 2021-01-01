@@ -6,6 +6,7 @@
            review="https://android-review.googlesource.com/" />
 
   <remote name="raspdroid"
+          revision="android-11"
           fetch="https://github.com/raspdroid" />
 
   <remote name="arpi"
