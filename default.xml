@@ -12,7 +12,7 @@
   <remote name="arpi"
           fetch="https://github.com/android-rpi" />
 
-  <default revision="refs/tags/android-11.0.0_r24"
+  <default revision="refs/tags/android-11.0.0_r27"
            remote="aosp"
            sync-j="4" />
 
